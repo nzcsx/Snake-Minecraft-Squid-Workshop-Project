@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:structure_void"
+    },
+    "title": {
+      "text": "Other",
+      "color": "light_purple"
+    },
+    "description": {
+      "text": "Other packs",
+      "color": "yellow"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "fran:root",
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
