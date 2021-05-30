@@ -8,6 +8,11 @@ function snake:classes/main/clean
 scoreboard objectives add snake_dir dummy
 
 ########################################
-# Create snake_score objective
-# snake_score := score of the snake game
-scoreboard objectives add snake_score dummy
+# Create snake_scr objective
+# snake_scr := score of this snake game
+scoreboard objectives add snake_scr dummy
+
+########################################
+# Create snake_uid objective
+# snake_uid := uuid of this snake game and player
+scoreboard objectives add snake_uid dummy
