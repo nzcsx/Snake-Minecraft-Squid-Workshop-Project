@@ -4,7 +4,16 @@ function snake:classes/main/clean
 
 ########################################
 # Create snake_dir objective
-#   snake_dir := direction of each snake_body 
+#   snake_dir := direction of each snake_body entity
+#       {score=0} := left
+#       {score=1} := up
+#       {score=2} := down
+#       {score=3} := right
+#   snake_dir := direction of this snake_center
+#       {score=0} := +z
+#       {score=1} := +x
+#       {score=2} := -z
+#       {score=3} := -x
 scoreboard objectives add snake_dir dummy
 
 ########################################
