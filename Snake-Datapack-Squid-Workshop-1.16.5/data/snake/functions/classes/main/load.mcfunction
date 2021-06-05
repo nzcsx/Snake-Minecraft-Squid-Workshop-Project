@@ -15,13 +15,13 @@ scoreboard objectives add snake_scr dummy
 ########################################
 # Create snake_uid objective
 #   snake_uid := uuid of this snake_center and player
-#   used to identify snake_center and player pair
+#       used to identify snake_center and player pair
 scoreboard objectives add snake_uid dummy
 
 ########################################
 # Create snake_stt objective
 #   snake_stt := state of this snake_center
-#   {score=0} := state_0_unpaired
-#   {score=1} := state_1_ready
-#   {score=2} := state_2_playing
+#       {score=0} := state_0_unpaired
+#       {score=1} := state_1_ready
+#       {score=2} := state_2_playing
 scoreboard objectives add snake_stt dummy
