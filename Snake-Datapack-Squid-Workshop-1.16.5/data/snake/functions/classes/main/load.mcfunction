@@ -24,4 +24,10 @@ scoreboard objectives add snake_uid dummy
 #       {score=0} := state_0_unpaired
 #       {score=1} := state_1_ready
 #       {score=2} := state_2_playing
+#       {score=3} := state_3_over
 scoreboard objectives add snake_stt dummy
+
+
+########################################
+# Loading message
+tellraw @a {"text":"[Server]: Snake-Datapack from Squid-Workshop Loaded","italic":true,"color":"gray"}
