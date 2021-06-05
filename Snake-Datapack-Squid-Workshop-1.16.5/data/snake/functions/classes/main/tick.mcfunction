@@ -1,4 +1,14 @@
 ########################################
-# Check if someone playing by checking
-# if snake_uid of player == snake_uid of center
-execute at @e[tag=snake_center] as @a if score @s snake_uid = @e[tag=snake_center,distance=..0.1,limit=1] snake_uid run function snake:classes/core/tick_as_player
+# Execute as each snake_center game
+# if unpaired
+execute as @e[tag=snake_center, scores={snake_stt=0}] run say unpaired
+
+########################################
+# Execute as each snake_center game
+# if ready
+execute as @e[tag=snake_center, scores={snake_stt=1}] run say ready
+
+########################################
+# Execute as each snake_center game
+# if playing
+execute as @e[tag=snake_center, scores={snake_stt=2}] run function snake:classes/state_2_playing/tick_as_center
