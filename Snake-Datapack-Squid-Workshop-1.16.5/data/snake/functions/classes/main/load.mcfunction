@@ -19,6 +19,8 @@ scoreboard objectives add snake_dir dummy
 ########################################
 # Create snake_scr objective
 #   snake_scr := score of this snake_center
+#       {score=null} := state_0_unpaired
+#       {score=0.. } := paired
 scoreboard objectives add snake_scr dummy
 
 ########################################

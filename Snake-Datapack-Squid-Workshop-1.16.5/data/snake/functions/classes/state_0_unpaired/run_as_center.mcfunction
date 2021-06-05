@@ -13,9 +13,9 @@ execute as @p run function snake:classes/state_0_unpaired/player_pair
 
 ########################################
 # Summon snake_body entities with tag new_body
-execute at @s align z run function snake:classes/state_0_unpaired/body_summon
+execute at @s align y run function snake:classes/state_0_unpaired/body_summon
 ########################################
-# Pair snake_body entities. Set Rotations. Remove tag new_body. 
+# Pair snake_body entities. Set stuffs. Remove tag new_body. 
 execute as @e[tag=new_body] run function snake:classes/state_0_unpaired/body_pair
 
 
@@ -23,6 +23,9 @@ execute as @e[tag=new_body] run function snake:classes/state_0_unpaired/body_pai
 ########################################
 # Update snake_stt of snake_center to state_1_ready
 scoreboard players set @s snake_stt 1
+########################################
+# Update snake_scr of snake_center to 0
+scoreboard players set @s snake_scr 0
 
 
 
