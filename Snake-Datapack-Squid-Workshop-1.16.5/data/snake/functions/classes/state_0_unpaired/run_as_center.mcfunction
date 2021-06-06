@@ -7,7 +7,7 @@ tag @s add this_center
 
 ########################################
 # Pair the player. Give items.
-execute positioned ^ ^ ^-20 as @p run function snake:classes/state_0_unpaired/player_pair
+execute positioned ^ ^ ^-20.0 as @p run function snake:classes/state_0_unpaired/player_pair
 
 
 
@@ -26,6 +26,13 @@ scoreboard players set @s snake_stt 1
 ########################################
 # Update snake_scr of snake_center to 0
 scoreboard players set @s snake_scr 0
+
+
+
+########################################
+# Update this hit button command block
+#   to unpair function
+data merge block ^ ^ ^-20.0 {Command:"function snake:classes/state_1_ready/hit_button_s0",LastOutput:''}
 
 
 
