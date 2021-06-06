@@ -12,7 +12,7 @@ execute if block ~ ~ ~ minecraft:command_block[facing=down ] run tellraw @p {"te
 ########################################
 # Check the direction of the command_block
 #   and run function accordingly
-execute if score @e[tag=snake_center,distance=..2,limit=1] snake_stt matches 0 if block ~ ~ ~ minecraft:command_block[facing=south] run function snake:classes/destruct/south
-execute if score @e[tag=snake_center,distance=..2,limit=1] snake_stt matches 0 if block ~ ~ ~ minecraft:command_block[facing=west ] run function snake:classes/destruct/west
-execute if score @e[tag=snake_center,distance=..2,limit=1] snake_stt matches 0 if block ~ ~ ~ minecraft:command_block[facing=north] run function snake:classes/destruct/north
-execute if score @e[tag=snake_center,distance=..2,limit=1] snake_stt matches 0 if block ~ ~ ~ minecraft:command_block[facing=east ] run function snake:classes/destruct/east
+execute if score @e[tag=snake_center,distance=..2,limit=1] snake_stt matches 0 if block ~ ~ ~ minecraft:command_block[facing=south] run function snake:classes/state_0_unpaired/to_destruct/south
+execute if score @e[tag=snake_center,distance=..2,limit=1] snake_stt matches 0 if block ~ ~ ~ minecraft:command_block[facing=west ] run function snake:classes/state_0_unpaired/to_destruct/west
+execute if score @e[tag=snake_center,distance=..2,limit=1] snake_stt matches 0 if block ~ ~ ~ minecraft:command_block[facing=north] run function snake:classes/state_0_unpaired/to_destruct/north
+execute if score @e[tag=snake_center,distance=..2,limit=1] snake_stt matches 0 if block ~ ~ ~ minecraft:command_block[facing=east ] run function snake:classes/state_0_unpaired/to_destruct/east
