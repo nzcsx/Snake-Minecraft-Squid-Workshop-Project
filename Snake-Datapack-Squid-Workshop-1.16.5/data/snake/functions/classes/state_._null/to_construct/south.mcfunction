@@ -13,6 +13,7 @@ tag @e[tag=new_center] remove new_center
 
 
 
+########################################
 # New structure
 setblock ~ ~0 ~-1 minecraft:structure_block{mode:"LOAD",rotation:"NONE",posX:-11,posY:-11,posZ:-21,name:"snake:construct"}
 setblock ~ ~1 ~-1 minecraft:redstone_block
