@@ -7,13 +7,13 @@ tag @s add this_center
 
 ########################################
 # Pair the player. Give items.
-execute as @p run function snake:classes/state_0_unpaired/player_pair
+execute positioned ^ ^ ^-20 as @p run function snake:classes/state_0_unpaired/player_pair
 
 
 
 ########################################
 # Summon snake_body entities with tag new_body
-execute at @s align y run function snake:classes/state_0_unpaired/body_summon
+execute align y run function snake:classes/state_0_unpaired/body_summon
 ########################################
 # Pair snake_body entities. Set stuffs. Remove tag new_body. 
 execute as @e[tag=new_body] run function snake:classes/state_0_unpaired/body_pair
