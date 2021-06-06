@@ -3,25 +3,20 @@
 function snake:classes/main/clean
 
 ########################################
-# Create snake_dir objective
-#   snake_dir := direction of each snake_body entity
-#       {score=0} := left
-#       {score=1} := up
-#       {score=2} := down
-#       {score=3} := right
-#   snake_dir := direction of this snake_center
-#       {score=0} := +z
-#       {score=1} := +x
-#       {score=2} := -z
-#       {score=3} := -x
-scoreboard objectives add snake_dir dummy
-
-########################################
 # Create snake_scr objective
 #   snake_scr := score of this snake_center
 #       {score=null} := state_0_unpaired
 #       {score=0.. } := paired
+#   snake_scr := highest score of this player
 scoreboard objectives add snake_scr dummy
+
+########################################
+# Create snake_game objective
+#   snake_cnt := total snake games constructed
+#   snake_1st := highest score of whole server
+scoreboard objectives add snake_game dummy
+scoreboard players set snake_cnt snake_game 0
+scoreboard players set snake_1st snake_game 0
 
 ########################################
 # Create snake_uid objective
