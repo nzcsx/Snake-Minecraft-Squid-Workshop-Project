@@ -5,8 +5,7 @@ function snake:classes/main/clean
 ########################################
 # Create snake_scr objective
 #   snake_scr := score of this snake_center
-#       {score=null} := state_0_unpaired
-#       {score=0.. } := paired
+#       Set to 0 when constructed
 #   snake_scr := highest score of this player
 scoreboard objectives add snake_scr dummy
 
@@ -20,8 +19,11 @@ scoreboard players set snake_1st snake_game 0
 
 ########################################
 # Create snake_uid objective
-#   snake_uid := uuid of this snake_center and player
-#       used to identify snake_center and player pair
+#   snake_uid := uuid of this snake_center
+#       Assigned when constructed
+#   snake_uid := uuid of this player
+#       {score=null} := unpaired
+#       {score=0.. } := paired
 scoreboard objectives add snake_uid dummy
 
 ########################################
