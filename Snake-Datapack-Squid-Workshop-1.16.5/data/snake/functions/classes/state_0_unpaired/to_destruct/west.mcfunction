@@ -1,6 +1,6 @@
 ########################################
 # Delete snake_center 
-kill @s
+kill @e[tag=snake_center,distance=..2.1,scores={snake_stt=0}]
 
 
 

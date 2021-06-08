@@ -6,7 +6,7 @@ execute if block ~ ~ ~ minecraft:command_block[facing=down ] run tellraw @p {"te
 
 ########################################
 # Check the direction of the command_block
-#   and run function accordingly
+#   then run function accordingly
 execute if block ~ ~ ~ minecraft:command_block[facing=south] run function snake:classes/state_._null/to_construct/south
 execute if block ~ ~ ~ minecraft:command_block[facing=west ] run function snake:classes/state_._null/to_construct/west
 execute if block ~ ~ ~ minecraft:command_block[facing=north] run function snake:classes/state_._null/to_construct/north

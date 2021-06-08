@@ -32,7 +32,7 @@ scoreboard players set @s snake_scr 0
 ########################################
 # Update this hit button command block
 #   to unpair function
-data merge block ^ ^ ^-20.0 {Command:"function snake:classes/state_1_ready/to_s0/hit_button_s0",LastOutput:''}
+data merge block ^ ^ ^-20.0 {Command:"function snake:classes/state_1_ready/to_s0/hit_button",LastOutput:''}
 
 
 
