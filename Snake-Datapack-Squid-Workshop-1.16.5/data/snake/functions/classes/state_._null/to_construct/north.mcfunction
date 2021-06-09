@@ -2,7 +2,7 @@
 # Summon a new snake_center
 #   Set its snake_stt to state_0_unpaired
 #   Set its snake_uid to snake_game of snake_cnt
-summon minecraft:armor_stand ~ ~ ~2 {Marker:1b, Invisible:0b, Rotation:[180f,0f], Tags:["snake_game", "snake_center", "new_center"],CustomName:'{"text":"center"}'}
+summon minecraft:armor_stand ~ ~ ~2 {Marker:1b, Invisible:0b, Rotation:[180f,0f], Tags:["snake_game", "snake_center", "new_center"]}
 
 scoreboard players set @e[tag=new_center] snake_stt 0
 

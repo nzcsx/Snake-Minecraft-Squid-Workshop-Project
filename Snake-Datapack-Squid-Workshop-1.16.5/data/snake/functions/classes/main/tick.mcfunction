@@ -1,12 +1,12 @@
 ########################################
 # Execute as each snake_center game
 # if unpaired
-execute as @e[tag=snake_center, scores={snake_stt=0}] run function snake:classes/state_0_unpaired/tick_as_center
+# N/A
 
 ########################################
 # Execute as each snake_center game
 # if ready
-#execute as @e[tag=snake_center, scores={snake_stt=1}] run say 1ready
+execute as @e[tag=snake_center, scores={snake_stt=1}] at @s run function snake:classes/state_1_ready/to_s2/tick_as_center
 
 ########################################
 # Execute as each snake_center game
