@@ -1,6 +1,7 @@
 ########################################
-# Delete snake_center
-kill @e[tag=snake_center,distance=..2.1,scores={snake_stt=0}]
+# Delete paired entities and
+# Unpair player
+execute positioned ~-2 ~ ~ as @e[tag=snake_center,distance=..0.1,limit=1] run function snake:classes/state_0_unpaired/to_destruct/destruct_as_center
 
 
 

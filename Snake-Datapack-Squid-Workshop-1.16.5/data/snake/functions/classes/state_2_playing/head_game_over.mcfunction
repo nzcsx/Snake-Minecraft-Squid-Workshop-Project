@@ -1,0 +1,2 @@
+execute if block ^ ^ ^1 #snake:boundary run scoreboard players set @e[tag=this_center,limit=1] snake_stt 3
+execute if entity @e[tag=snake_nothead,distance=..0.1] run scoreboard players set @e[tag=this_center,limit=1] snake_stt 3
