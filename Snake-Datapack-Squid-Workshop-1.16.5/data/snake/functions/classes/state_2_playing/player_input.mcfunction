@@ -4,10 +4,12 @@ execute as @e[tag=snake_head] if score @s snake_uid = @e[tag=this_center,limit=1
 
 
 
-execute if entity @s[nbt={SelectedItem:{tag:{snake_left :true}}}] as @e[tag=this_head,limit=1] run function snake:classes/state_2_playing/player_head_left
-execute if entity @s[nbt={SelectedItem:{tag:{snake_up   :true}}}] as @e[tag=this_head,limit=1] run function snake:classes/state_2_playing/player_head_up
-execute if entity @s[nbt={SelectedItem:{tag:{snake_down :true}}}] as @e[tag=this_head,limit=1] run function snake:classes/state_2_playing/player_head_down
-execute if entity @s[nbt={SelectedItem:{tag:{snake_right:true}}}] as @e[tag=this_head,limit=1] run function snake:classes/state_2_playing/player_head_right
+########################################
+# Change head dir according to inputs
+execute if entity @s[nbt={SelectedItem:{tag:{snake_left :true}}}] run function snake:classes/state_2_playing/player_head_left
+execute if entity @s[nbt={SelectedItem:{tag:{snake_up   :true}}}] run function snake:classes/state_2_playing/player_head_up
+execute if entity @s[nbt={SelectedItem:{tag:{snake_down :true}}}] run function snake:classes/state_2_playing/player_head_down
+execute if entity @s[nbt={SelectedItem:{tag:{snake_right:true}}}] run function snake:classes/state_2_playing/player_head_right
 
 
 

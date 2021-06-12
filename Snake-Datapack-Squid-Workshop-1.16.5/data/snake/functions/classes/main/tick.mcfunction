@@ -1,7 +1,7 @@
 ########################################
 # Execute as each snake_center game
 # if unpaired
-# N/A
+execute as @e[tag=snake_center, scores={snake_stt=0}] run data modify entity @s Age set value 0
 
 ########################################
 # Execute as each snake_center game
@@ -16,4 +16,4 @@ execute as @e[tag=snake_center, scores={snake_stt=2}] at @s run function snake:c
 ########################################
 # Execute as each snake_center game
 # if game over
-#execute as @e[tag=snake_center, scores={snake_stt=3}] run say 3over
+execute as @e[tag=snake_center, scores={snake_stt=3}] at @s run function snake:classes/state_3_over/tick_as_center

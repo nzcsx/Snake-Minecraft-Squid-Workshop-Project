@@ -35,13 +35,6 @@ scoreboard objectives add snake_uid dummy
 #       {score=3} := state_3_over
 scoreboard objectives add snake_stt dummy
 
-########################################
-# Create snake_tmr objective
-#   snake_tmr := timer of this snake_center
-#       {score=0} := the tick snake moves
-#       {score=20} := loop back to 0 imm.
-scoreboard objectives add snake_tmr dummy
-
 
 
 ########################################

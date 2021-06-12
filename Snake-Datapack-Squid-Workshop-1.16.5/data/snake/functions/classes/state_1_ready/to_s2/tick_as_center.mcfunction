@@ -13,5 +13,11 @@ execute as @a[scores={shift_begin=1}] if score @s snake_uid = @e[tag=this_center
 
 
 ########################################
+# Reset the timer to 0 (aka to 1 next tick)
+data modify entity @s Age set value 0
+
+
+
+########################################
 # Untag this snake_center
 tag @s remove this_center

@@ -8,7 +8,7 @@ execute if block ~ ~ ~ minecraft:command_block[facing=down ] run tellraw @a[dist
 # Check no snake_center in not state_0_unpaired
 #   and the direction of the command_block
 #   then run function accordingly
-execute if block ~ ~ ~ minecraft:command_block[facing=south] run function snake:classes/state_0_unpaired/to_destruct/south
-execute if block ~ ~ ~ minecraft:command_block[facing=west ] run function snake:classes/state_0_unpaired/to_destruct/west
-execute if block ~ ~ ~ minecraft:command_block[facing=north] run function snake:classes/state_0_unpaired/to_destruct/north
-execute if block ~ ~ ~ minecraft:command_block[facing=east ] run function snake:classes/state_0_unpaired/to_destruct/east
+execute if block ~ ~ ~ minecraft:command_block[facing=south] run function snake:classes/to_destruct/south
+execute if block ~ ~ ~ minecraft:command_block[facing=west ] run function snake:classes/to_destruct/west
+execute if block ~ ~ ~ minecraft:command_block[facing=north] run function snake:classes/to_destruct/north
+execute if block ~ ~ ~ minecraft:command_block[facing=east ] run function snake:classes/to_destruct/east
