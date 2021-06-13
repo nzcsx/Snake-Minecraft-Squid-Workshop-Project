@@ -26,15 +26,6 @@ scoreboard players set snake_1st snake_game 0
 #       {score=0.. } := paired
 scoreboard objectives add snake_uid dummy
 
-########################################
-# Create snake_stt objective
-#   snake_stt := state of this snake_center
-#       {score=0} := state_0_unpaired
-#       {score=1} := state_1_ready
-#       {score=2} := state_2_playing
-#       {score=3} := state_3_over
-scoreboard objectives add snake_stt dummy
-
 
 
 ########################################

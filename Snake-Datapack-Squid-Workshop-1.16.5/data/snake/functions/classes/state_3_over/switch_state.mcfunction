@@ -1,7 +1,6 @@
 ########################################
 # Remove paired snake_body snake_block entities
-execute as @e[tag=snake_body ] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
-execute as @e[tag=snake_block] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
+execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
 
 ########################################
 # Summon snake_body snake_block entities with tag new_body
@@ -19,7 +18,8 @@ data modify entity @s Age set value 0
 
 ########################################
 # Set the state to ready
-scoreboard players set @s snake_stt 1
+tag @s remove state_3
+tag @s add state_1
 
 
 

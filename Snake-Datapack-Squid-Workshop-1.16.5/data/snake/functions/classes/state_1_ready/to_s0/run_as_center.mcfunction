@@ -12,15 +12,15 @@ execute as @a if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run 
 
 
 ########################################
-# Remove paired snake_body snake_block entities
-execute as @e[tag=snake_body ] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
-execute as @e[tag=snake_block] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
+# Remove paired snake_body snake_block snake_food entities
+execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
 
 
 
 ########################################
 # Update snake_stt of snake_center to state_0_unpaired
-scoreboard players set @s snake_stt 0
+tag @s remove state_1
+tag @s add state_0
 ########################################
 # Update snake_scr of snake_center to 0
 scoreboard players set @s snake_scr 0

@@ -2,7 +2,7 @@
 # Summon a new snake_center
 #   Set its snake_stt to state_0_unpaired
 #   Set its snake_uid to snake_game of snake_cnt
-summon minecraft:area_effect_cloud ~-2 ~ ~ {Duration:101, Rotation:[-90f,0f], Tags:["snake_game", "snake_center", "new_center"]}
+summon minecraft:area_effect_cloud ~-2 ~ ~ {Duration:101, Rotation:[-90f,0f], Tags:["snake_game", "snake_center", "new_center", "state_0"]}
 
 scoreboard players set @e[tag=new_center] snake_stt 0
 
