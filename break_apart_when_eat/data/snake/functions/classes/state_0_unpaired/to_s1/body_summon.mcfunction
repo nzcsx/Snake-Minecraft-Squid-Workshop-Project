@@ -11,4 +11,4 @@ summon minecraft:armor_stand ^ ^-3 ^0.75 {Marker:1b,Invisible:0b,Tags:["new_body
 
 ########################################
 # Summon new food
-summon minecraft:falling_block ^ ^3 ^0.75 {BlockState:{Name:"minecraft:redstone_block"},NoGravity:1b,Time:-2147483648,DropItem:0b,HurtEntities:0b,Tags:["snake_game","snake_food","new_body"]}
+summon minecraft:falling_block ^ ^9 ^0.75 {BlockState:{Name:"minecraft:redstone_block"},NoGravity:1b,Time:-2147483648,DropItem:0b,HurtEntities:0b,Tags:["snake_game","snake_food","new_body"]}

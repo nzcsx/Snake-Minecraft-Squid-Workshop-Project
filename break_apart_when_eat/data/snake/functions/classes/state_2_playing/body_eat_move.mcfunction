@@ -12,12 +12,12 @@ execute unless entity @e[tag=snake_food,distance=..0.1] as @e[tag=snake_body] if
 ########################################
 # Move forward and
 # Leave a dir indicator
-execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/body_forward
+#execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/body_forward
 
 ########################################
 # Update direction and
 # Remove a dir indicator
-execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/body_direction
+#execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/body_direction
 
 ########################################
 # Untag these_bodies
