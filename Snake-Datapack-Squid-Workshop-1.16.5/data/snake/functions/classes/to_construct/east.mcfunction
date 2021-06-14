@@ -1,13 +1,13 @@
 ########################################
 # Summon a new snake_center
-#   Set its snake_stt to state_0_unpaired
+#   Set its state to state_0_unpaired
 #   Set its snake_uid to snake_game of snake_cnt
 summon minecraft:area_effect_cloud ~-2 ~ ~ {Duration:101, Rotation:[-90f,0f], Tags:["snake_game", "snake_center", "new_center", "state_0"]}
 
-scoreboard players set @e[tag=new_center] snake_stt 0
+tag @e[tag=new_center] add state_0
 
-scoreboard players operation @e[tag=new_center] snake_uid = snake_cnt snake_game
-scoreboard players add snake_cnt snake_game 1
+scoreboard players operation @e[tag=new_center] snake_uid = count snake_game
+scoreboard players add count snake_game 1
 
 tag @e[tag=new_center] remove new_center
 
@@ -22,4 +22,4 @@ setblock ~-1 ~1 ~ minecraft:redstone_block
 
 ########################################
 # Success message
-tellraw @p {"text":"[Snake Game]: New snake game facing east constructed.","italic":true,"color":"gray"}
+tellraw @p {"text":"[Snake Game]: Constructed a snake game facing east.","italic":true,"color":"gray"}

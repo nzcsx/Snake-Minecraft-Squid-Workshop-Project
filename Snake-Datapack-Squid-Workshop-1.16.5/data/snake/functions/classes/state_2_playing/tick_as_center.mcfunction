@@ -5,18 +5,18 @@ tag @s add this_center
 
 
 ########################################
-# Check player input at snake_tmr = 1
+# Check player input at timer = 1
 #   Possible player inputs: 
 #       Turn left, up, right, down
-execute as @a if score @s snake_uid = @e[tag=this_center,nbt={Age:1},limit=1] snake_uid run function snake:classes/state_2_playing/player_input
+execute as @a if score @s snake_uid = @e[tag=this_center,nbt={Age:1},limit=1] snake_uid run function snake:classes/state_2_playing/input/as_player
 
 
 
 ########################################
-# Check food using snake_head at snake_tmr = 1
+# Check food using snake_head at timer = 1
 #   Eat food or
 #   Move forward
-execute as @e[tag=snake_head] if score @s snake_uid = @e[tag=this_center,nbt={Age:1},limit=1] snake_uid at @s positioned ^ ^ ^1 run function snake:classes/state_2_playing/body_eat_move
+execute as @e[tag=snake_head] if score @s snake_uid = @e[tag=this_center,nbt={Age:1},limit=1] snake_uid at @s positioned ^ ^ ^1 run function snake:classes/state_2_playing/eat_or_move/as_head
 
 
 
@@ -29,7 +29,7 @@ execute as @e[tag=snake_head] if score @s snake_uid = @e[tag=this_center,limit=1
 ########################################
 # if ( Age == 20 )
 # then reset the timer to 0 (aka to 1 next tick)
-execute if data entity @s {Age:20} run data modify entity @s Age set value 0
+execute if data entity @s {Age:10} run data modify entity @s Age set value 0
 
 
 

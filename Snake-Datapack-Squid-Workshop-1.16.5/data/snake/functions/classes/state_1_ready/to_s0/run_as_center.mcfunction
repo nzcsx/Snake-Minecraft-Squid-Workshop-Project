@@ -18,7 +18,7 @@ execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_uid = @e[tag=t
 
 
 ########################################
-# Update snake_stt of snake_center to state_0_unpaired
+# Update state of snake_center to state_0_unpaired
 tag @s remove state_1
 tag @s add state_0
 ########################################

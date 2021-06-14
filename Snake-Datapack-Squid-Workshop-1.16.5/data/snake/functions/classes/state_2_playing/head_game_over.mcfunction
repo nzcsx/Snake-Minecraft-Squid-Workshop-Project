@@ -1,7 +1,7 @@
 ########################################
 # If hit boundary or bite self, game over
-execute align y if block ^ ^0.5 ^0.25 #snake:boundary run tag @e[tag=this_center] remove state_2
-execute align y if block ^ ^0.5 ^0.25 #snake:boundary run tag @e[tag=this_center] add state_3
+execute align y if block ^ ^0.5 ^0.15 #snake:boundary run tag @e[tag=this_center] remove state_2
+execute align y if block ^ ^0.5 ^0.15 #snake:boundary run tag @e[tag=this_center] add state_3
 execute if entity @e[tag=snake_nothead,distance=..0.1] run tag @e[tag=this_center] remove state_2
 execute if entity @e[tag=snake_nothead,distance=..0.1] run tag @e[tag=this_center] add state_3
 
