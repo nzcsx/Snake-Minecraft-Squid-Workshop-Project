@@ -21,6 +21,10 @@ data modify entity @s Age set value 0
 tag @s remove state_3
 tag @s add state_1
 
+########################################
+# Update snake_scr of snake_center to 0
+scoreboard players set @s snake_scr 0
+
 
 
 ########################################

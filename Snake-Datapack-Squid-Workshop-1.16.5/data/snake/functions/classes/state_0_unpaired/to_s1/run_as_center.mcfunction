@@ -21,9 +21,10 @@ execute as @e[tag=new_body] run function snake:classes/state_0_unpaired/to_s1/bo
 
 
 ########################################
-# Update state of snake_center to state_1_ready
+# Set the state to state_1
 tag @s remove state_0
 tag @s add state_1
+
 ########################################
 # Update snake_scr of snake_center to 0
 scoreboard players set @s snake_scr 0

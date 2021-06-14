@@ -91,3 +91,9 @@ execute as @e[tag=snake_head   ] if score @s snake_uid = @e[tag=this_center,limi
 execute as @e[tag=snake_nothead] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid at @s run function snake:classes/state_2_playing/eat_or_move/eat/nothead_reconstruct
 
 kill @e[tag=old_block]
+
+
+
+########################################
+# Add a score to this_center
+scoreboard players add @e[tag=this_center] snake_scr 1
