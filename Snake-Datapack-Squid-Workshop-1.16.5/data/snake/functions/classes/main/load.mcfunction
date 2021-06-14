@@ -6,7 +6,7 @@
 # Create snake_scr objective
 #   snake_scr := score of this snake_center
 #       Set to 0 when constructed
-#   snake_scr := highest score of this player
+#   snake_scr := high score of this player
 scoreboard objectives add snake_scr dummy
 
 ########################################
@@ -24,6 +24,11 @@ scoreboard objectives add snake_uid dummy
 #   1st := highest score in the server
 scoreboard objectives add snake_game dummy
 function snake:classes/state_0_unpaired/refresh_count_uid/hit_button
+
+########################################
+# Create --Leaderboard-- objective
+#   just a replica of snake_scr of players
+scoreboard objectives add --Leaderboard-- dummy
 
 
 

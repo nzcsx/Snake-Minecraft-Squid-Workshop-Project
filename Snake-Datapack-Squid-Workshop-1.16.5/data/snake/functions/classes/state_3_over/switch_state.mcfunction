@@ -1,4 +1,10 @@
 ########################################
+# Undisplay leaderboard
+scoreboard objectives setdisplay sidebar
+
+
+
+########################################
 # Remove paired snake_body snake_block entities
 execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
 

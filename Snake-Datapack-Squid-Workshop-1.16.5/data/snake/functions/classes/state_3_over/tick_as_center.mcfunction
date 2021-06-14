@@ -5,8 +5,12 @@ tag @s add this_center
 
 
 ########################################
-# Display game related info
-execute if data entity @s {Age:1  } as @a if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run function snake:classes/state_3_over/display_scores
+# Update personal high score
+#   Display score of this round
+#   Display personal high score
+# Update leaderboard
+#   Display leaderboard
+execute if data entity @s {Age:1  } as @a if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run function snake:classes/state_3_over/player_scores
 
 
 
