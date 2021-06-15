@@ -1,10 +1,4 @@
 ########################################
-# Undisplay leaderboard
-scoreboard objectives setdisplay sidebar
-
-
-
-########################################
 # Remove paired snake_body snake_block entities
 execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
 
@@ -39,6 +33,12 @@ execute if block ^ ^ ^2.0 command_block[facing=south] run setblock ^ ^1.0 ^-20.0
 execute if block ^ ^ ^2.0 command_block[facing=east ] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=east ]
 execute if block ^ ^ ^2.0 command_block[facing=north] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=north]
 execute if block ^ ^ ^2.0 command_block[facing=west ] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=west ]
+
+
+
+########################################
+# Undisplay leaderboard
+team remove snake_game
 
 
 

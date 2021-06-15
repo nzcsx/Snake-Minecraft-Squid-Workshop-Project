@@ -16,7 +16,7 @@ execute if data entity @s {Age:1  } as @a if score @s snake_uid = @e[tag=this_ce
 
 ########################################
 # Switch to ready state
-execute if data entity @s {Age:60} run function snake:classes/state_3_over/switch_state
+execute if data entity @s {Age:100} run function snake:classes/state_3_over/switch_state
 
 
 
