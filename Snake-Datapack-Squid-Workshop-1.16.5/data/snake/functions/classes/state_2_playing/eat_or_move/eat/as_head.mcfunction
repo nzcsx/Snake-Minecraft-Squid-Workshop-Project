@@ -1,26 +1,27 @@
 ########################################
-# Tag this snake_head, so lower functions can select it
-# tag @s add this_head
+# Kill the food
+kill @e[tag=snake_food,distance=..0.1]
+
+
+
 
 
 
 ########################################
-# Kill the food
-# kill @e[tag=snake_food,distance=..0.1]
+# Tag this snake_head, so lower functions can select it
+tag @s add this_head
+
+
 
 ########################################
 # Grow the snake
-# execute at @s run function snake:classes/state_2_playing/eat_or_move/eat/body_grow
-
-########################################
-# Summon new food
-# execute as @e[tag=this_center,limit=1] at @s align y positioned ^ ^ ^0.85 run function snake:classes/state_2_playing/eat_or_move/eat/food_gen
+execute at @s run function snake:classes/state_2_playing/eat_or_move/eat/body_grow
 
 
 
 ########################################
 # Untag this this_head
-# tag @e[tag=this_head] remove this_head
+tag @e[tag=this_head] remove this_head
 
 
 
@@ -34,50 +35,44 @@
 
 ########################################
 # Tag these_bodies first
-execute as @e[tag=snake_body] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run tag @s add these_bodies
-
-
-
-########################################
-# Kill the food
-kill @e[tag=snake_food,distance=..0.1]
+#execute as @e[tag=snake_body] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run tag @s add these_bodies
 
 
 
 ########################################
 # Summon new snake_tail
-execute as @e[tag=these_bodies,tag=snake_tail] at @s run function snake:classes/state_2_playing/eat_or_move/eat/tail_create
+# execute as @e[tag=these_bodies,tag=snake_tail] at @s run function snake:classes/state_2_playing/eat_or_move/eat/tail_create
 
 ########################################
 # Move forward and
 # Leave a dir indicator
-execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_forward
+# execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_forward
 
 ########################################
 # Update direction and
 # Remove a dir indicator
-execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_direction
+# execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_direction
 
 ########################################
 # Change the old snake_tail
-execute as @e[tag=these_bodies,tag=snake_tail] run tag @s remove snake_tail
+# execute as @e[tag=these_bodies,tag=snake_tail] run tag @s remove snake_tail
+
+
+
+########################################
+# Untag these_bodies
+# tag @e[tag=these_bodies] remove these_bodies
+
+
+
+###############################################################################################################
+###############################################################################################################
 
 
 
 ########################################
 # Summon new food
 execute as @e[tag=this_center,limit=1] at @s align y positioned ^ ^ ^0.85 run function snake:classes/state_2_playing/eat_or_move/eat/food_gen
-
-
-
-########################################
-# Untag these_bodies
-tag @e[tag=these_bodies] remove these_bodies
-
-
-
-###############################################################################################################
-###############################################################################################################
 
 
 
@@ -96,4 +91,5 @@ kill @e[tag=old_block]
 
 ########################################
 # Add a score to this_center
-scoreboard players add @e[tag=this_center] snake_scr 1
+# Update snake_prd
+execute as @e[tag=this_center] run function snake:classes/state_2_playing/eat_or_move/eat/center_score

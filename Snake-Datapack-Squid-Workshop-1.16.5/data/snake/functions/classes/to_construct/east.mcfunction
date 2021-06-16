@@ -1,14 +1,19 @@
 ########################################
 # Summon a new snake_center
-#   Set its state to state_0_unpaired
-#   Set its snake_uid to snake_game of snake_cnt
 summon minecraft:area_effect_cloud ~-2 ~ ~ {Duration:101, Rotation:[-90f,0f], Tags:["snake_game", "snake_center", "new_center", "state_0"]}
 
+########################################
+# Set its state to state_0_unpaired
 tag @e[tag=new_center] add state_0
 
+########################################
+# Set its snake_uid to snake_game of count
+# count ++
 scoreboard players operation @e[tag=new_center] snake_uid = count snake_game
 scoreboard players add count snake_game 1
 
+########################################
+# Untag new_center
 tag @e[tag=new_center] remove new_center
 
 

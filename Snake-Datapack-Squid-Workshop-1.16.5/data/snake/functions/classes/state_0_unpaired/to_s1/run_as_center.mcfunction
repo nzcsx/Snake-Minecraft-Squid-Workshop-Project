@@ -29,6 +29,10 @@ tag @s add state_1
 # Update snake_scr of snake_center to 0
 scoreboard players set @s snake_scr 0
 
+########################################
+# Update snake_prd of snake_center to 10
+scoreboard players set @s snake_prd 10
+
 
 
 ########################################

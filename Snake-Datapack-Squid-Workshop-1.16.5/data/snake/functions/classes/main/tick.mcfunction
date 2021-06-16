@@ -6,7 +6,7 @@ execute as @e[tag=snake_center, tag=state_0] at @s run data modify entity @s Age
 ########################################
 # Execute as each snake_center game
 # if ready
-execute as @e[tag=snake_center, tag=state_1] at @s run function snake:classes/state_1_ready/to_s2/tick_as_center
+execute as @e[tag=snake_center, tag=state_1] at @s run function snake:classes/state_1_ready/tick_as_center
 
 ########################################
 # Execute as each snake_center game

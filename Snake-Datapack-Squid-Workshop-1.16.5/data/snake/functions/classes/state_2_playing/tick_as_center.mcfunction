@@ -27,9 +27,10 @@ execute as @e[tag=snake_head] if score @s snake_uid = @e[tag=this_center,limit=1
 
 
 ########################################
-# if ( Age == 20 )
+# if ( Age == snake_prd )
 # then reset the timer to 0 (aka to 1 next tick)
-execute if data entity @s {Age:10} run data modify entity @s Age set value 0
+execute store result score r0 snake_game run data get entity @s Age
+execute if score r0 snake_game = @s snake_prd run data modify entity @s Age set value 0
 
 
 
