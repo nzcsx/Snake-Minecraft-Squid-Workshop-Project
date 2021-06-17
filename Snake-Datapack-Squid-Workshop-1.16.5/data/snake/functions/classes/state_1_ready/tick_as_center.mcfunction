@@ -10,15 +10,15 @@ execute as @a if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run 
 
 ########################################
 # Check player start
-execute if score @a[tag=this_player,limit=1] shift_begin matches 1 run function snake:classes/state_1_ready/to_s2/run_as_center
+execute as @a[tag=this_player,scores={shift_begin=1},limit=1] run function snake:classes/state_1_ready/to_s2/run_as_player
 
 ########################################
-# Automatic unpair if paired player does not exist
-execute unless entity @a[tag=new_player] run function snake:classes/state_1_ready/to_s0/run_as_center
+# Set to state_0 if paired player does not exist
+execute unless entity @a[tag=this_player] run function snake:classes/state_1_ready/to_s0/run_as_center
 
 ########################################
 # Untag paired player
-tag @a[tag=new_player] remove this_player
+tag @a[tag=this_player] remove this_player
 
 
 

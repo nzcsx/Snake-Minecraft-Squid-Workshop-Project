@@ -1,6 +1,6 @@
 ########################################
-# Pair the player with snake_center
-#   by setting their snake_uid
+# Unpair the player with snake_center
+#   by resetting their snake_uid
 scoreboard players reset @s snake_uid
 
 ########################################
