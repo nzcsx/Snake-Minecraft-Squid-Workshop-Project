@@ -3,5 +3,5 @@
 scoreboard players set count snake_game 0
 
 ########################################
-# Reassign snake_uid
+# Reassign snake_cuid
 execute as @e[tag=snake_center] run function snake:classes/state_0_unpaired/refresh_count_uid/run_as_center

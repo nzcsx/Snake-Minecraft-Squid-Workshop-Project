@@ -16,13 +16,21 @@ scoreboard objectives add snake_scr dummy
 scoreboard objectives add --Leaderboard-- dummy
 
 ########################################
-# Create snake_uid objective
-#   snake_uid := uuid of this snake_center
+# Create snake_cuid objective
+#   snake_cuid := center uid of this snake_center
 #       Assigned when constructed, starting from 0.
-#   snake_uid := uuid of this player
+#   snake_cuid := center uid of this player
 #       {score=null} := unpaired
 #       {score=0.. } := paired
-scoreboard objectives add snake_uid dummy
+scoreboard objectives add snake_cuid dummy
+
+########################################
+# Create snake_puid objective
+#   snake_puid :=  player uid of this snake_center
+#       {score=null} := unpaired
+#       {score=0.. } := paired
+scoreboard objectives add snake_puid dummy
+execute as @a store result score @s snake_puid run data get entity @s UUID[0]
 
 ########################################
 # Create snake_game objective
@@ -33,6 +41,7 @@ scoreboard objectives add snake_uid dummy
 scoreboard objectives add snake_game dummy
 function snake:classes/state_0_unpaired/refresh_count_uid/hit_button
 execute unless score 1st snake_game matches 1.. run scoreboard players set 1st snake_game 0
+execute as @a run function snake:classes/to_fix_player_uid/run_as_player
 
 ########################################
 # Create snake_prd objective

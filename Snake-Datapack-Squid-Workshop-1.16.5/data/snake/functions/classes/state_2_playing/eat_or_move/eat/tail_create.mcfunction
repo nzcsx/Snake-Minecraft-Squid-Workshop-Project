@@ -4,8 +4,8 @@ summon minecraft:armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["new_body","sna
 
 ########################################
 # Pair new_body with snake_center
-#   by setting snake_uid
-scoreboard players operation @e[tag=new_body] snake_uid = @e[tag=this_center] snake_uid
+#   by setting snake_cuid
+scoreboard players operation @e[tag=new_body] snake_cuid = @e[tag=this_center] snake_cuid
 
 ########################################
 # Set new_body rotations to old snake_tail

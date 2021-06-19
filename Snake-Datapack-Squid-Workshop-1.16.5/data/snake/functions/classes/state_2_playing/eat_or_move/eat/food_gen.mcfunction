@@ -10,8 +10,8 @@ execute at @e[tag=snake_rand,sort=random,limit=1] run summon minecraft:falling_b
 
 ########################################
 # Pair food with snake_center
-#   by setting their snake_uid
-scoreboard players operation @e[tag=new_body] snake_uid = @e[tag=this_center] snake_uid
+#   by setting their snake_cuid
+scoreboard players operation @e[tag=new_body] snake_cuid = @e[tag=this_center] snake_cuid
 
 ########################################
 # Remove tag new_body

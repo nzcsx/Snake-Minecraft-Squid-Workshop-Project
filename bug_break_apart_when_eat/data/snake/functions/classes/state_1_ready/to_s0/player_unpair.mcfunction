@@ -1,7 +1,7 @@
 ########################################
 # Pair the player with snake_center
-#   by setting their snake_uid
-scoreboard players reset @s snake_uid
+#   by setting their snake_cuid
+scoreboard players reset @s snake_cuid
 
 ########################################
 # Give the player items

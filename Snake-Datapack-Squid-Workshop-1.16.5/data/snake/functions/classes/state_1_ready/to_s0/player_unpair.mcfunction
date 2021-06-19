@@ -1,7 +1,7 @@
 ########################################
 # Unpair the player with snake_center
-#   by resetting their snake_uid
-scoreboard players reset @s snake_uid
+#   by resetting player's snake_cuid
+scoreboard players reset @s snake_cuid
 
 ########################################
 # Give the player items

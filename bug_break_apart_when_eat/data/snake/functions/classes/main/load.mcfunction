@@ -18,13 +18,13 @@ scoreboard players set snake_cnt snake_game 0
 scoreboard players set snake_1st snake_game 0
 
 ########################################
-# Create snake_uid objective
-#   snake_uid := uuid of this snake_center
+# Create snake_cuid objective
+#   snake_cuid := uuid of this snake_center
 #       Assigned when constructed
-#   snake_uid := uuid of this player
+#   snake_cuid := uuid of this player
 #       {score=null} := unpaired
 #       {score=0.. } := paired
-scoreboard objectives add snake_uid dummy
+scoreboard objectives add snake_cuid dummy
 
 
 

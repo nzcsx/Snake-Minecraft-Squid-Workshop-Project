@@ -8,8 +8,11 @@ tag @s add this_player
 
 
 ########################################
-# Check for corresponding snake_center
-execute as @e[tag=snake_center] if score @s snake_uid = @e[tag=this_player,limit=1] snake_uid run function snake:classes/to_fix_player_uid/center_states 
+# If paired snake_center with snake_puid nonexistent
+#   Reset player snake_cuid
+execute as @e[tag=snake_center] if score @s snake_puid = @e[tag=this_player,limit=1] snake_puid run tag @s add this_center
+execute unless entity @e[tag=this_center] run scoreboard players reset @s snake_cuid
+tag @e[tag=this_center] remove this_center
 
 
 

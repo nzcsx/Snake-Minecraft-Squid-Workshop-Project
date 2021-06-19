@@ -1,7 +1,7 @@
 ########################################
 # Pair them with snake_center
-#   by setting their snake_uid
-scoreboard players operation @s snake_uid = @e[tag=this_center] snake_uid
+#   by setting their snake_cuid
+scoreboard players operation @s snake_cuid = @e[tag=this_center] snake_cuid
 
 ########################################
 # Set their yaw from snake_center

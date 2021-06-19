@@ -1,6 +1,6 @@
 ########################################
 # Remove paired snake_body snake_block entities
-execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
+execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_cuid = @e[tag=this_center,limit=1] snake_cuid run kill @s
 
 ########################################
 # Summon snake_body snake_block entities with tag new_body
@@ -34,4 +34,4 @@ execute if block ^ ^ ^2.0 command_block[facing=west ] run setblock ^ ^1.0 ^-20.0
 
 ########################################
 # Success message
-execute as @a if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run tellraw @s {"text":"[Snake Game]: Care for another round?","italic":true,"color":"gray"}
+execute as @a if score @s snake_cuid = @e[tag=this_center,limit=1] snake_cuid run tellraw @s {"text":"[Snake Game]: Care for another round?","italic":true,"color":"gray"}

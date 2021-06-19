@@ -1,7 +1,10 @@
 ########################################
 # Pair the player with snake_center
-#   by setting their snake_uid
-scoreboard players operation @s snake_uid = @e[tag=this_center] snake_uid
+#   by setting player's snake_cuid and
+#   by setting center's snake_puid
+scoreboard players operation @s snake_cuid = @e[tag=this_center] snake_cuid
+execute store result score @s snake_puid run data get entity @s UUID[0]
+scoreboard players operation @e[tag=this_center] snake_puid = @s snake_puid
 
 ########################################
 # Give the player items

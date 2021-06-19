@@ -7,9 +7,9 @@ summon minecraft:area_effect_cloud ~2 ~ ~ {Duration:101, Rotation:[90f,0f], Tags
 tag @e[tag=new_center] add state_0
 
 ########################################
-# Set its snake_uid to snake_game of count
+# Set its snake_cuid to snake_game of count
 # count ++
-scoreboard players operation @e[tag=new_center] snake_uid = count snake_game
+scoreboard players operation @e[tag=new_center] snake_cuid = count snake_game
 scoreboard players add count snake_game 1
 
 ########################################

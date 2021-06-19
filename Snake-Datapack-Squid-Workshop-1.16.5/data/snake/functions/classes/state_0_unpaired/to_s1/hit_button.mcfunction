@@ -1,7 +1,7 @@
 ########################################
 # Error message:
 #   Player already paired
-tellraw @a[distance=..5,scores={snake_uid=0..},sort=nearest,limit=1] {"text":"[Snake Game]: You are already in a snake game. Quit the game first.","italic":true,"color":"gray"}
+tellraw @a[distance=..5,scores={snake_cuid=0..},sort=nearest,limit=1] {"text":"[Snake Game]: You are already in a snake game. Quit the game first.","italic":true,"color":"gray"}
 
 ########################################
 # Error message:
@@ -14,7 +14,7 @@ execute if block ~ ~ ~ minecraft:command_block[facing=down ] run tellraw @p {"te
 #   and the direction of the command_block
 #   then find the snake_center accordingly
 #   then run function accordingly
-execute unless entity @a[distance=..5,scores={snake_uid=0..},sort=nearest,limit=1] if block ~ ~ ~ minecraft:command_block[facing=south] positioned ~ ~ ~20.0 as @e[tag=snake_center,tag=state_0,sort=nearest,limit=1,distance=..1] at @s run function snake:classes/state_0_unpaired/to_s1/run_as_center
-execute unless entity @a[distance=..5,scores={snake_uid=0..},sort=nearest,limit=1] if block ~ ~ ~ minecraft:command_block[facing=west ] positioned ~-20.0 ~ ~ as @e[tag=snake_center,tag=state_0,sort=nearest,limit=1,distance=..1] at @s run function snake:classes/state_0_unpaired/to_s1/run_as_center
-execute unless entity @a[distance=..5,scores={snake_uid=0..},sort=nearest,limit=1] if block ~ ~ ~ minecraft:command_block[facing=north] positioned ~ ~ ~-20.0 as @e[tag=snake_center,tag=state_0,sort=nearest,limit=1,distance=..1] at @s run function snake:classes/state_0_unpaired/to_s1/run_as_center
-execute unless entity @a[distance=..5,scores={snake_uid=0..},sort=nearest,limit=1] if block ~ ~ ~ minecraft:command_block[facing=east ] positioned ~20.0 ~ ~ as @e[tag=snake_center,tag=state_0,sort=nearest,limit=1,distance=..1] at @s run function snake:classes/state_0_unpaired/to_s1/run_as_center
+execute unless entity @a[distance=..5,scores={snake_cuid=0..},sort=nearest,limit=1] if block ~ ~ ~ minecraft:command_block[facing=south] positioned ~ ~ ~20.0 as @e[tag=snake_center,tag=state_0,sort=nearest,limit=1,distance=..1] at @s run function snake:classes/state_0_unpaired/to_s1/run_as_center
+execute unless entity @a[distance=..5,scores={snake_cuid=0..},sort=nearest,limit=1] if block ~ ~ ~ minecraft:command_block[facing=west ] positioned ~-20.0 ~ ~ as @e[tag=snake_center,tag=state_0,sort=nearest,limit=1,distance=..1] at @s run function snake:classes/state_0_unpaired/to_s1/run_as_center
+execute unless entity @a[distance=..5,scores={snake_cuid=0..},sort=nearest,limit=1] if block ~ ~ ~ minecraft:command_block[facing=north] positioned ~ ~ ~-20.0 as @e[tag=snake_center,tag=state_0,sort=nearest,limit=1,distance=..1] at @s run function snake:classes/state_0_unpaired/to_s1/run_as_center
+execute unless entity @a[distance=..5,scores={snake_cuid=0..},sort=nearest,limit=1] if block ~ ~ ~ minecraft:command_block[facing=east ] positioned ~20.0 ~ ~ as @e[tag=snake_center,tag=state_0,sort=nearest,limit=1,distance=..1] at @s run function snake:classes/state_0_unpaired/to_s1/run_as_center

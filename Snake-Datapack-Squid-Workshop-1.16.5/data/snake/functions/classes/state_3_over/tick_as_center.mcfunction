@@ -10,7 +10,7 @@ tag @s add this_center
 #   Display personal high score
 # Update leaderboard
 #   Display leaderboard
-execute if data entity @s {Age:1  } as @a if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run function snake:classes/state_3_over/player_scores
+execute if data entity @s {Age:1  } as @a if score @s snake_puid = @e[tag=this_center,limit=1] snake_puid run function snake:classes/state_3_over/player_scores
 
 
 

@@ -1,6 +1,6 @@
 ########################################
 # Tag these_bodies first
-execute as @e[tag=snake_body] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run tag @s add these_bodies
+execute as @e[tag=snake_body] if score @s snake_cuid = @e[tag=this_center,limit=1] snake_cuid run tag @s add these_bodies
 
 
 

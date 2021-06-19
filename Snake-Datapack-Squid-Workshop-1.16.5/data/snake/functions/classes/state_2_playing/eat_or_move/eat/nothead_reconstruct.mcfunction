@@ -5,7 +5,7 @@ summon minecraft:armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["new_body","sna
 ########################################
 # Replicate the nbts from old snake_body
 tp @e[tag=new_body] ~ ~ ~ ~ ~
-scoreboard players operation @e[tag=new_body] snake_uid = @e[tag=this_center] snake_uid
+scoreboard players operation @e[tag=new_body] snake_cuid = @e[tag=this_center] snake_cuid
 data modify entity @e[tag=new_body,tag=snake_body,limit=1] Tags set from entity @s Tags
 
 ########################################

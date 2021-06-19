@@ -7,13 +7,13 @@ tag @s add this_center
 
 ########################################
 # Unpair the player. Give items.
-execute as @a if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run function snake:classes/state_1_ready/to_s0/player_unpair
+execute as @a if score @s snake_cuid = @e[tag=this_center,limit=1] snake_cuid run function snake:classes/state_1_ready/to_s0/player_unpair
 
 
 
 ########################################
 # Remove paired snake_body snake_block snake_food entities
-execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_uid = @e[tag=this_center,limit=1] snake_uid run kill @s
+execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_cuid = @e[tag=this_center,limit=1] snake_cuid run kill @s
 
 
 
