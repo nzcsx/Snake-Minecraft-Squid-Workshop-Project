@@ -1,4 +1,10 @@
 ########################################
+# Try fix player cuid first
+execute as @a[distance=..5,scores={snake_cuid=0..}] run function snake:classes/state_0_unpaired/fix_player_cuid/run_as_player
+
+
+
+########################################
 # Error message:
 #   Player already paired
 tellraw @a[distance=..5,scores={snake_cuid=0..},sort=nearest,limit=1] {"text":"[Snake Game]: You are already in a snake game. Quit the game first.","italic":true,"color":"gray"}
