@@ -41,7 +41,7 @@ execute as @a store result score @s snake_puid run data get entity @s UUID[0]
 scoreboard objectives add snake_game dummy
 function snake:classes/state_0_unpaired/refresh_count_uid/hit_button
 execute unless score 1st snake_game matches 1.. run scoreboard players set 1st snake_game 0
-execute as @a run function snake:classes/to_fix_player_uid/run_as_player
+function snake:classes/state_0_unpaired/fix_player_cuid/hit_button
 
 ########################################
 # Create snake_prd objective
