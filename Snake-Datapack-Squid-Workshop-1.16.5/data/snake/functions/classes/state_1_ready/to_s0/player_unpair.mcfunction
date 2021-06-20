@@ -3,6 +3,14 @@
 #   by resetting player's snake_cuid
 scoreboard players reset @s snake_cuid
 
+
+
+########################################
+# Undisplay leaderboard by leave team
+team leave @s
+
+
+
 ########################################
 # Give the player items
 replaceitem entity @s hotbar.0 minecraft:air
@@ -18,4 +26,4 @@ replaceitem entity @s hotbar.8 minecraft:air
 
 ########################################
 # Success message
-tellraw @p {"text":"[Snake Game]: Goodbye.","italic":true,"color":"gray"}
+tellraw @s {"text":"[Snake Game]: Goodbye.","italic":true,"color":"gray"}

@@ -1,1 +1,1 @@
-execute as @a run function snake:classes/state_0_unpaired/fix_player_cuid/run_as_player
+execute as @a[scores={snake_cuid=0..}] run function snake:classes/state_0_unpaired/fix_player_cuid/run_as_player

@@ -32,17 +32,16 @@ scoreboard players set @s snake_prd 10
 
 
 ########################################
+# Update this hit button command block
+#   to unpair function
+data merge block ^ ^ ^-20.0 {Command:"function snake:classes/state_1_ready/to_s0/hit_button",LastOutput:''}
+
+########################################
 # Setblock unpair button
 execute if block ^ ^ ^2.0 command_block[facing=south] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=south]
 execute if block ^ ^ ^2.0 command_block[facing=east ] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=east ]
 execute if block ^ ^ ^2.0 command_block[facing=north] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=north]
 execute if block ^ ^ ^2.0 command_block[facing=west ] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=west ]
-
-
-
-########################################
-# Undisplay leaderboard by leave team
-execute as @a if score @s snake_cuid = @s snake_cuid run team leave @s
 
 
 

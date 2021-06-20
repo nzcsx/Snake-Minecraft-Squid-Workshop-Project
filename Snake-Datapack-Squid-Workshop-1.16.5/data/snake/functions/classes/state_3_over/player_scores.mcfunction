@@ -1,12 +1,4 @@
 ########################################
-# Set snake_game 1st
-#   from snake_scr of snake_center
-#   It will be at least 0.
-scoreboard players operation 1st snake_game > @e[tag=this_center,limit=1] snake_scr
-
-
-
-########################################
 # Set --Leaderboard-- of this player
 #   from snake_scr of snake_center
 #   It will be at least 0.
@@ -14,12 +6,20 @@ scoreboard players operation @s --Leaderboard-- > @e[tag=this_center,limit=1] sn
 
 ########################################
 # Add player to leaderboard team
-#   will be removed from team in switch_state
 team join snake_game @s
 
 ########################################
 # Display leaderboard for all in the team
 scoreboard objectives setdisplay sidebar.team.white --Leaderboard--
+
+
+
+########################################
+# Set snake_game 1st
+#   from snake_scr of snake_center
+#   It will be at least 0.
+execute if score @s --Leaderboard-- > 1st snake_game run summon firework_rocket ^ ^-7 ^-5 {LifeTime:20,FireworksItem:{id:"firework_rocket",Count:1,tag:{Fireworks:{Explosions:[{Type:2,Trail:1,Colors:[I;7468549],FadeColors:[I;16711680]}],Flight:1}}}}
+scoreboard players operation 1st snake_game > @s --Leaderboard--
 
 
 
@@ -53,13 +53,5 @@ execute unless score @s --Leaderboard-- matches 1.. run scoreboard players reset
 
 ########################################
 # Give the player items
-replaceitem entity @s hotbar.0 minecraft:lime_banner{ snake_left :1b,display:{Name:'{"text":"LEFT" ,"italic":false,"bold":true}'}, BlockEntityTag:{Patterns:[{Color:15,Pattern:"lud"},{Color:15,Pattern:"ld" }]}}
-replaceitem entity @s hotbar.1 minecraft:black_banner{snake_up   :1b,display:{Name:'{"text":"UP"   ,"italic":false,"bold":true}'}, BlockEntityTag:{Patterns:[{Color:5 ,Pattern:"mr" },{Color:15,Pattern:"hhb"}]}}
-replaceitem entity @s hotbar.2 minecraft:black_banner{snake_down :0b,display:{Name:'{"text":"DOWN" ,"italic":false,"bold":true}'}, BlockEntityTag:{Patterns:[{Color:5 ,Pattern:"mr" },{Color:15,Pattern:"hh" }]}}
-replaceitem entity @s hotbar.3 minecraft:lime_banner{ snake_right:1b,display:{Name:'{"text":"RIGHT","italic":false,"bold":true}'}, BlockEntityTag:{Patterns:[{Color:15,Pattern:"rd" },{Color:15,Pattern:"rud"}]}}
-
-replaceitem entity @s hotbar.4 minecraft:air
-replaceitem entity @s hotbar.5 minecraft:air
-replaceitem entity @s hotbar.6 minecraft:air
-replaceitem entity @s hotbar.7 minecraft:air
-replaceitem entity @s hotbar.8 minecraft:air
+execute if entity @e[tag=this_center,tag=!bi_dir] run function snake:classes/state_0_unpaired/to_s1/player_items_4
+execute if entity @e[tag=this_center,tag= bi_dir] run function snake:classes/state_0_unpaired/to_s1/player_items_2

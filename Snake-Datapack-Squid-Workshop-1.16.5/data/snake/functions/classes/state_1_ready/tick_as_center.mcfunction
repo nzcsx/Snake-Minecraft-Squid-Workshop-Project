@@ -6,7 +6,7 @@ tag @s add this_center
 
 ########################################
 # Tag paired player
-execute as @a if score @s snake_puid = @e[tag=this_center,limit=1] snake_puid run tag @s add this_player
+execute positioned ^ ^ ^-20 as @a[distance=..5] if score @s snake_puid = @e[tag=this_center,limit=1] snake_puid run tag @s add this_player
 
 ########################################
 # Check player start

@@ -5,7 +5,7 @@ tag @s add this_center
 
 
 ########################################
-# Check player input at timer = 1
+# Check player inputs
 #   Possible player inputs: 
 #       Turn left, up, right, down
 execute as @a if score @s snake_puid = @e[tag=this_center,limit=1] snake_puid run function snake:classes/state_2_playing/input/as_player
@@ -13,10 +13,17 @@ execute as @a if score @s snake_puid = @e[tag=this_center,limit=1] snake_puid ru
 
 
 ########################################
-# Check food using snake_head at timer = 1
+# Check food using snake_head
 #   Eat food or
 #   Move forward
 execute as @e[tag=snake_head] if score @s snake_cuid = @e[tag=this_center,limit=1] snake_cuid at @s positioned ^ ^ ^1 run function snake:classes/state_2_playing/eat_or_move/as_head
+
+
+
+########################################
+# Display score in actionbar 
+#   might block the view
+# execute as @a if score @s snake_puid = @e[tag=this_center,limit=1] snake_puid run title @s actionbar ["",{"text":"Current score: "},{"score":{"name":"@e[tag=this_center,limit=1]","objective":"snake_scr"}}]
 
 
 
