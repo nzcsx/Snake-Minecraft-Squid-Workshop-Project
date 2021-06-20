@@ -16,6 +16,21 @@ scoreboard objectives add snake_scr dummy
 scoreboard objectives add --Leaderboard-- dummy
 
 ########################################
+# Create snake_buid objective
+#   snake_buid := previous body uid of this snake_body
+#       Assigned when summoned
+scoreboard objectives add snake_buid dummy
+
+########################################
+# Create snake_cuid objective
+#   snake_cuid := center uid of this snake_center
+#       Assigned when constructed, starting from 0.
+#   snake_cuid := center uid of this player
+#       {score=null} := unpaired
+#       {score=0.. } := paired
+scoreboard objectives add snake_cuid dummy
+
+########################################
 # Create snake_cuid objective
 #   snake_cuid := center uid of this snake_center
 #       Assigned when constructed, starting from 0.

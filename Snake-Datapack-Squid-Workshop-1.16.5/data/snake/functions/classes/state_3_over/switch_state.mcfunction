@@ -8,7 +8,7 @@ execute align y run function snake:classes/state_0_unpaired/to_s1/body_summon
 
 ########################################
 # Pair snake_body snake_block entities. Set stuffs. Remove tag new_body. 
-execute as @e[tag=new_body] run function snake:classes/state_0_unpaired/to_s1/body_pair
+execute as @e[tag=new_body] at @s run function snake:classes/state_0_unpaired/to_s1/body_pair
 
 
 

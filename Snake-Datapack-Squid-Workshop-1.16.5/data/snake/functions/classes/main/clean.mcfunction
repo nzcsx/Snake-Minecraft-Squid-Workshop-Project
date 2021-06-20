@@ -5,6 +5,7 @@ scoreboard objectives remove snake_prd
 scoreboard objectives remove snake_game
 scoreboard objectives remove snake_cuid
 scoreboard objectives remove snake_puid
+scoreboard objectives remove snake_buid
 scoreboard objectives remove --Leaderboard--
 
 ########################################

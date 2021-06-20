@@ -16,6 +16,18 @@ execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing
 
 
 
+###############################################################################################################
+# above is moving altogether (works with growing at neck, tail)
+# below is moving one at a time (works with growing at tail, )
+# try comment/uncomment one another to see the difference
+###############################################################################################################
+
+
+
+# execute as @e[tag=these_bodies] run function snake:classes/state_2_playing/eat_or_move/move/body_move
+
+
+
 ########################################
 # Untag these_bodies
 tag @e[tag=these_bodies] remove these_bodies
