@@ -5,8 +5,13 @@ scoreboard players operation @s snake_cuid = @e[tag=this_center] snake_cuid
 
 ########################################
 # Set its snake_buid
+#   from its UUID
+execute store result score @s snake_buid run data get entity @s UUID[0]
+
+########################################
+# Set its snake_buid_prev
 #   from previous body's UUID
-execute store result score @s snake_buid positioned ~ ~1 ~ run data get entity @e[distance=..0.1,limit=1] UUID[0]
+execute store result score @s snake_buid_prev positioned ~ ~1 ~ run data get entity @e[distance=..0.1,limit=1] UUID[0]
 
 ########################################
 # Set its yaw from snake_center+90

@@ -5,26 +5,8 @@ execute as @e[tag=snake_body] if score @s snake_cuid = @e[tag=this_center,limit=
 
 
 ########################################
-# Move forward and
-# Leave a dir indicator
-execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_forward
-
-########################################
-# Update direction and
-# Remove a dir indicator
-execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_direction
-
-
-
-###############################################################################################################
-# above is moving altogether (works with growing at neck, tail)
-# below is moving one at a time (works with growing at tail, )
-# try comment/uncomment one another to see the difference
-###############################################################################################################
-
-
-
-# execute as @e[tag=these_bodies] run function snake:classes/state_2_playing/eat_or_move/move/body_move
+# Move the whole snake starting from tail
+execute as @e[tag=these_bodies,tag=snake_tail] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_move
 
 
 

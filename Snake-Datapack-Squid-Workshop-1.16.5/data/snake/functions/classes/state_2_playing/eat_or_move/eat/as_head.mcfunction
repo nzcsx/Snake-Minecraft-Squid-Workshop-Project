@@ -8,34 +8,6 @@ execute as @a if score @s snake_puid = @e[tag=this_center,limit=1] snake_puid ru
 
 
 
-###############################################################################################################
-###############################################################################################################
-
-
-
-########################################
-# Tag this snake_head, so lower functions can select it
-# tag @s add this_head
-
-
-
-########################################
-# Grow the snake
-# execute at @s run function snake:classes/state_2_playing/eat_or_move/eat/body_grow
-
-
-
-########################################
-# Untag this this_head
-# tag @e[tag=this_head] remove this_head
-
-
-
-###############################################################################################################
-# above is growing at neck
-# below is growing at tail
-# try comment/uncomment one another to see the difference
-###############################################################################################################
 
 
 
@@ -43,25 +15,13 @@ execute as @a if score @s snake_puid = @e[tag=this_center,limit=1] snake_puid ru
 # Tag these_bodies first
 execute as @e[tag=snake_body] if score @s snake_cuid = @e[tag=this_center,limit=1] snake_cuid run tag @s add these_bodies
 
-
-
 ########################################
 # Summon new snake_tail
-execute as @e[tag=these_bodies,tag=snake_tail] at @s run function snake:classes/state_2_playing/eat_or_move/eat/tail_create
+execute as @e[tag=these_bodies,tag=snake_tail] at @s run function snake:classes/state_2_playing/eat_or_move/eat/tail_summon
 
 ########################################
-# Move forward and
-# Leave a dir indicator
-execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_forward
-
-########################################
-# Update direction and
-# Remove a dir indicator
-execute as @e[tag=these_bodies] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_direction
-
-########################################
-# Change the old snake_tail
-execute as @e[tag=these_bodies,tag=snake_tail] run tag @s remove snake_tail
+# Move the whole snake starting from tail
+execute as @e[tag=these_bodies,tag=snake_tail] at @s run function snake:classes/state_2_playing/eat_or_move/move/body_move
 
 
 
@@ -71,8 +31,6 @@ tag @e[tag=these_bodies] remove these_bodies
 
 
 
-###############################################################################################################
-###############################################################################################################
 
 
 

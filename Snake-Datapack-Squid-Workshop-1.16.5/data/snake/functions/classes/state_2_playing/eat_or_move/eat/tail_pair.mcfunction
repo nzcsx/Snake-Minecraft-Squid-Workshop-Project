@@ -1,11 +1,20 @@
-########################################
-# Summon new_body
-summon minecraft:armor_stand ~ ~ ~ {Marker:1b,Invisible:1b,Tags:["new_body","snake_game","snake_body","snake_tail","snake_nothead"],Passengers:[{"id":"minecraft:falling_block",BlockState:{Name:"minecraft:lime_wool"  },NoGravity:1b,Time:-2147483648,DropItem:0b,HurtEntities:0b,Tags:["snake_game","snake_block","new_body"]}]}
+"snake_tail",
 
 ########################################
 # Pair new_body with snake_center
 #   by setting snake_cuid
-scoreboard players operation @e[tag=new_body] snake_cuid = @e[tag=this_center] snake_cuid
+scoreboard players operation @s snake_cuid = @e[tag=this_center] snake_cuid
+
+########################################
+# Set its snake_buid
+#   from its UUID
+execute store result score @s snake_buid run data get entity @s UUID[0]
+
+########################################
+# Set its snake_buid_prev
+#   from previous body's UUID
+execute store result score @s snake_buid_prev run data get entity @e[tag=these_bodies,tag=snake_tail,limit=1] UUID[0]
+
 
 ########################################
 # Set snake_buid to old tail's UUID

@@ -17,9 +17,15 @@ scoreboard objectives add --Leaderboard-- dummy
 
 ########################################
 # Create snake_buid objective
-#   snake_buid := previous body uid of this snake_body
+#   snake_buid := body uid of this snake_body
 #       Assigned when summoned
 scoreboard objectives add snake_buid dummy
+
+########################################
+# Create snake_buid objective
+#   snake_buid := previous body uid of this snake_body
+#       Assigned when summoned
+scoreboard objectives add snake_buid_prev dummy
 
 ########################################
 # Create snake_cuid objective
