@@ -1,1 +1,1 @@
-# Snake-Minecraft-Squid-Workshop-Project
+# _Squid Workshop's_ Snake Data Pack
