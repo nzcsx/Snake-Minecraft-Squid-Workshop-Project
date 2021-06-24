@@ -45,4 +45,4 @@ data merge block ^ ^ ^-20.0 {Command:"function snake:classes/state_1_ready/to_s0
 
 ########################################
 # Untag this snake_center
-tag @s remove this_center
+tag @s[tag=this_center] remove this_center
