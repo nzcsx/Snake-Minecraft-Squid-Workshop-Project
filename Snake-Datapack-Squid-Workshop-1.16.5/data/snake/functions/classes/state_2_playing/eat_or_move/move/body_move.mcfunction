@@ -14,7 +14,10 @@ execute as @e[tag=these_bodies] if score @s snake_buid = @e[tag=this_body,limit=
 
 ########################################
 # Move this_body forward
+execute store result score r0 snake_game run data get entity @s[tag=snake_head] Rotation[1]
 tp @s[tag=snake_head] ^ ^ ^1
+execute store result entity @s[tag=snake_head] Rotation[1] float 5 run scoreboard players get r0 snake_game
+
 tp @s[tag=!snake_head] @e[tag=prev_body,limit=1]
 
 

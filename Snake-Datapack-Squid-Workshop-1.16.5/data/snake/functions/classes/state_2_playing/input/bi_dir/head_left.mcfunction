@@ -8,6 +8,7 @@ scoreboard players operation r0 snake_game -= r1 snake_game
 execute store result entity @e[tag=this_head,limit=1] Rotation[1] float 5 run scoreboard players get r0 snake_game
 
 
+
 ########################################
 # Replace player items
 execute if entity @s[nbt={SelectedItemSlot:0}] run function snake:classes/state_2_playing/input/bi_dir/slot_0

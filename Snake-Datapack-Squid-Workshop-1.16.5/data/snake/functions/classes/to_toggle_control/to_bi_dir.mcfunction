@@ -8,4 +8,4 @@ execute as @a if score @s snake_puid = @e[tag=this_center,limit=1] snake_puid ru
 
 ########################################
 # Success message
-tellraw @a[distance=..5] {"text":"[Snake Game]: Toggled this game board to bi-directional control","italic":true,"color":"gray"}
+tellraw @a[distance=..5] {"text":"[Snake Game]: Toggled this game board to 2-key control","italic":true,"color":"gray"}

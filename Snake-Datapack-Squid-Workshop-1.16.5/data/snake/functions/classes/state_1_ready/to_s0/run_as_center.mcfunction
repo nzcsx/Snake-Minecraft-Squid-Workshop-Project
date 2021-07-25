@@ -35,6 +35,13 @@ execute as @e[tag=snake_game,tag=!snake_center] if score @s snake_cuid = @e[tag=
 #   to unpair function
 data merge block ^ ^ ^-20.0 {Command:"function snake:classes/state_0_unpaired/to_s1/hit_button",LastOutput:''}
 
+########################################
+# Setblock unpair button
+execute if block ^ ^ ^2.0 command_block[facing=south] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=south]
+execute if block ^ ^ ^2.0 command_block[facing=east ] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=east ]
+execute if block ^ ^ ^2.0 command_block[facing=north] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=north]
+execute if block ^ ^ ^2.0 command_block[facing=west ] run setblock ^ ^1.0 ^-20.0 stone_button[face=floor,facing=west ]
+
 
 
 ########################################
