@@ -1,5 +1,5 @@
 ########################################
-# Tag itself previous body
+# Untag itself previous body
 tag @s remove prev_body
 
 ########################################
@@ -13,12 +13,9 @@ execute as @e[tag=these_bodies] if score @s snake_buid = @e[tag=this_body,limit=
 
 
 ########################################
-# Change the rotation of this_body to its previous body
-execute at @e[tag=prev_body,limit=1] positioned as @s run tp @s ~ ~ ~ ~ ~
-
-########################################
 # Move this_body forward
-tp @s ^ ^ ^1
+tp @s[tag=snake_head] ^ ^ ^1
+tp @s[tag=!snake_head] @e[tag=prev_body,limit=1]
 
 
 
