@@ -1,0 +1,1 @@
+function snake:classes/to_construct/hit_button
