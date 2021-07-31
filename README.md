@@ -10,7 +10,7 @@ A [minecraft datapack](https://minecraft.fandom.com/wiki/Data_Pack) that allows 
 - [More About Squid Workshop](#More-About-Squid-Workshop)
 
 # Abstract
-This datapack allows you to play classic snake game in minecraft. You can generate more than one game rooms in server. Players can play games at the same time without interferemce among them.
+This datapack allows you to play classic snake game in minecraft. You can generate more than one game rooms in server. Players can play games at the same time without interferemce among them. This datapack depends on the [Bools Datapack](https://github.com/nzcsx/Bools-Minecraft-Squid-Workshop-Project) I made earlier.
 
 # Installation
 - Step 1 **Before installation, install my [damage datapack](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) first.**
