@@ -14,14 +14,14 @@ This datapack allows you to play classic snake game in minecraft. You can genera
 
 # Installation
 - Step 1 Before installing this pack, install my [Bools Datapack](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) first.
+- Step 2 Download this data pack. 
+	- Either "Snake-Datapack-Squid-Workshop-1.16.5.zip" or "Snake-Datapack-Squid-Workshop-1.7.zip" depends on your game version
+- Step 3 Go to minecraft saves directory, usually "C:/Users/youUserName/AppData/Roaming/.minecraft/saves".
+- Step 4 Choose the world folder in which you want to install the packs.
+- Step 4 Go to ../datapacks folder.
+- Step 5 Move "Snake-Datapack-Squid-Workshop-1.XX.zip" into ../datapacks folder.
+- Step 6 Open Minecraft and open the world.
+- Step 7 Type "/reload" command then press enter.
+- Step 8 Enjoy
 
-- Step 2 Download this repository as .zip and unpack, you will get three folders: 2 datapack folders + 1 resourcepack folder.
-	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**
-	- **Gun-Datapack-Squid-Workshop-1.16.5**
-	- **Throwable-Datapack-Squid Workshop-1.16.5**
-- Step 3 Install the two datapacks together, if you don't know how to install datapacks, see [Tutorials/Installing a data pack](https://minecraft.fandom.com/wiki/Tutorials/Installing_a_data_pack)
-	- **Gun-Datapack-Squid-Workshop-1.16.5**
-	- **Throwable-Datapack-Squid Workshop-1.16.5**
-- Step 4 Load the resourcepack, if you don't know how to load resourcepacks, see [Tutorials/Loading a resource pack](https://minecraft.fandom.com/wiki/Tutorials/Loading_a_resource_pack)
-	- **Firearms-Resourcepack-Squid-Workshop-1.16.5**
-- Step 5 If successfully installed, you will see the messages: 
+# Usage
