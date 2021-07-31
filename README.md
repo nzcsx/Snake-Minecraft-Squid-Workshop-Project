@@ -15,7 +15,9 @@ This datapack allows you to play classic snake game in minecraft. You can genera
 # Installation
 - Step 1 Before installing this pack, install my [Bools Datapack](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) first.
 - Step 2 Download this data pack. 
-	- Either "Snake-Datapack-Squid-Workshop-1.16.5.zip" or "Snake-Datapack-Squid-Workshop-1.7.zip" depends on your game version
+	- Check your Minecraft version
+	- If game version is 1.16.x, download "Snake-Datapack-Squid-Workshop-1.16.5.zip"
+	- If game version is 1.17.x and above, download "Snake-Datapack-Squid-Workshop-1.17.zip"
 - Step 3 Go to minecraft saves directory, usually "C:/Users/youUserName/AppData/Roaming/.minecraft/saves".
 - Step 4 Choose the world folder in which you want to install the packs.
 - Step 4 Go to ../datapacks folder.
