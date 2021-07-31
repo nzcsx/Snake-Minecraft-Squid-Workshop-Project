@@ -1,5 +1,5 @@
 # _Squid Workshop's_ Snake Data Pack
-A [minecraft datapack](https://minecraft.fandom.com/wiki/Data_Pack) that allows you to play classic snake game in minecraft.
+A minecraft datapack that allows you to play classic snake game in minecraft.
 
 - [Abstract](#Abstract)
 - [Installation](#Installation)
