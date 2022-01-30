@@ -37,15 +37,6 @@ scoreboard objectives add snake_buid_prev dummy
 scoreboard objectives add snake_cuid dummy
 
 ########################################
-# Create snake_cuid objective
-#   snake_cuid := center uid of this snake_center
-#       Assigned when constructed, starting from 0.
-#   snake_cuid := center uid of this player
-#       {score=null} := unpaired
-#       {score=0.. } := paired
-scoreboard objectives add snake_cuid dummy
-
-########################################
 # Create snake_puid objective
 #   snake_puid :=  player uid of this snake_center
 #       {score=null} := unpaired

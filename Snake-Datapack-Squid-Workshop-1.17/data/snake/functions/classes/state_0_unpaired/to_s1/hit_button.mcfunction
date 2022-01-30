@@ -1,5 +1,5 @@
 ########################################
-# Try fix player cuid first
+# Try repair loose-end player cuid first
 execute as @a[distance=..5,scores={snake_cuid=0..}] run function snake:classes/state_0_unpaired/fix_player_cuid/run_as_player
 
 
