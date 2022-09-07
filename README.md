@@ -13,7 +13,7 @@ A minecraft datapack that allows you to play classic snake game in minecraft.
 This datapack allows you to play classic snake game in minecraft. You can generate more than one game rooms in server. Players can play games at the same time without interferemce among them. This datapack depends on the [Bools Datapack](https://github.com/nzcsx/Bools-Minecraft-Squid-Workshop-Project) I made earlier.
 
 # Installation
-- Step 1 Before installing this pack, install my [Bools Datapack](https://github.com/DaveHJT/Damage-Minecraft-Squid-Workshop-Project) first.
+- Step 1 Before installing this pack, install my [Bools Datapack](https://github.com/nzcsx/Bools-Minecraft-Squid-Workshop-Project) first.
 - Step 2 Download this data pack. 
 	- Check your Minecraft version
 	- For 1.16.x, download "Snake-Datapack-Squid-Workshop-1.16.5.zip"
